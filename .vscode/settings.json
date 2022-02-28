@@ -1,0 +1,14 @@
+{
+  "eslint.validate": [
+    "javascript"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "[markdown]": {
+    "editor.formatOnSave": false
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
+}
