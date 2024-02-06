@@ -5,7 +5,6 @@ import blog from "blog";
 blog({
   author: "Stephen Melnicki",
   title: "Stephen Melnicki",
-  description: "Personal Website",
   avatar: "/avatar.png",
   avatarClass: "rounded-full",
   links: [
@@ -16,8 +15,8 @@ blog({
     { title: "GitHub", url: "https://github.com/stephenmelnicki" },
     { title: "LinkedIn", url: "https://www.linkedin.com/in/stephen-melnicki" },
   ],
-  lang: "en",
-  dateFormat: (date) =>
+  lang: "en-US",
+  dateFormat: (date: Date) =>
     new Intl.DateTimeFormat("en-US", { dateStyle: "long" }).format(date),
   favicon: "favicon.ico",
 });
