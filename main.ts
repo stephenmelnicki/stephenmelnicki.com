@@ -8,7 +8,7 @@ blog({
   links: [
     {
       title: "Email",
-      url: "mailto:stephen@stephenmelnicki.com",
+      url: "mailto:hello@stephenmelnicki.com",
     },
     {
       title: "GitHub",
