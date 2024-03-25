@@ -1,25 +1,23 @@
 name: ci
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+on: [push, pull_request]
 
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - name: Clone repository
+      - name: clone repository
         uses: actions/checkout@v2
 
-      - name: Install Deno
+      - name: install Deno
         uses: denoland/setup-deno@v1
+        with:
+          deno-version: 1.x
 
-      - name: Check formatting
+      - name: formatting
         run: deno fmt --check
 
-      - name: Lint
+      - name: lint
         run: deno lint
 
-      - name: Typecheck
+      - name: typecheck
         run: deno check main.ts

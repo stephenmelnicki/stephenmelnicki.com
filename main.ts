@@ -1,4 +1,6 @@
-import blog from "blog";
+/** @jsx h */
+import blog, { h } from "blog";
+import Footer from "./components/Footer.tsx";
 
 blog({
   author: "Stephen Melnicki",
@@ -22,4 +24,5 @@ blog({
   lang: "en-US",
   dateFormat: (date: Date) =>
     new Intl.DateTimeFormat("en-US", { dateStyle: "long" }).format(date),
+  footer: Footer(),
 });
