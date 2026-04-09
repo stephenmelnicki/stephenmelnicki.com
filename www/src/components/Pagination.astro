@@ -1,0 +1,32 @@
+---
+interface Props {
+  prev: string | undefined;
+  next: string | undefined;
+  currentPage: number;
+  lastPage: number;
+}
+
+const { prev, next, currentPage, lastPage } = Astro.props;
+---
+
+<nav>
+  {
+    prev ? (
+      <a href={prev} type="button" class="outline">
+        Newer
+      </a>
+    ) : null
+  }
+
+  <small>{`Page ${currentPage} of ${lastPage}`}</small>
+
+  {
+    next ? (
+      <a href={next} type="button" class="outline">
+        Older
+      </a>
+    ) : null
+  }
+</nav>
+
+<hr />

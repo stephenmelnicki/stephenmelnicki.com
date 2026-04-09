@@ -1,0 +1,59 @@
+{
+  "name": "stephenmelnicki.com",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "pre-commit": "lint-staged",
+    "lint": "eslint --cache .",
+    "lint:fix": "pnpm run lint --fix",
+    "check": "astro check",
+    "dev": "netlify dev",
+    "build": "netlify build",
+    "deploy": "netlify deploy"
+  },
+  "dependencies": {
+    "@astrojs/check": "catalog:www",
+    "@astrojs/mdx": "catalog:www",
+    "@astrojs/netlify": "catalog:www",
+    "@astrojs/react": "catalog:www",
+    "@astrojs/rss": "catalog:www",
+    "@astrojs/sitemap": "catalog:www",
+    "@picocss/pico": "catalog:www",
+    "@sanity/astro": "catalog:www",
+    "@sanity/client": "catalog:www",
+    "astro": "catalog:www",
+    "astro-portabletext": "catalog:www",
+    "dayjs": "catalog:www",
+    "groq": "catalog:www",
+    "react": "catalog:react",
+    "react-dom": "catalog:react",
+    "sanity": "catalog:studio",
+    "typescript": "catalog:typescript"
+  },
+  "devDependencies": {
+    "@eslint/js": "catalog:utils",
+    "@portabletext/types": "catalog:typescript",
+    "@sanity/types": "catalog:typescript",
+    "@types/react": "catalog:typescript",
+    "@types/react-dom": "catalog:typescript",
+    "autoprefixer": "catalog:utils",
+    "cssnano": "catalog:utils",
+    "eslint": "catalog:utils",
+    "eslint-plugin-astro": "catalog:utils",
+    "eslint-config-prettier": "catalog:utils",
+    "eslint-plugin-format": "catalog:utils",
+    "eslint-plugin-prettier": "catalog:utils",
+    "lint-staged": "catalog:utils",
+    "netlify-cli": "catalog:utils",
+    "prettier": "catalog:utils",
+    "prettier-plugin-astro": "catalog:utils",
+    "simple-git-hooks": "catalog:utils",
+    "typescript": "catalog:typescript",
+    "typescript-eslint": "catalog:utils",
+    "vite": "catalog:utils"
+  },
+  "lint-staged": {
+    "*.{astro,js,ts,md,toml}": "eslint --cache --fix"
+  }
+}

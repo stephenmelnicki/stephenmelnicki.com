@@ -1,0 +1,16 @@
+---
+import PostLayout from "../../layouts/PostLayout.astro";
+import { PortableText } from "astro-portabletext";
+import { getSlugs, getPost } from "../../utils/sanity";
+
+export async function getStaticPaths(): Promise<{ params: { slug: string } }> {
+  return await getSlugs();
+}
+
+const { slug } = Astro.params;
+const post = await getPost(slug);
+---
+
+<PostLayout title={post.title} date={post.date}>
+  <PortableText value={post.content} />
+</PostLayout>

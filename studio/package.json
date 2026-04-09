@@ -1,0 +1,33 @@
+{
+  "name": "studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "pre-commit": "lint-staged",
+    "lint": "eslint --cache .",
+    "lint:fix": "pnpm run lint --fix",
+    "dev": "sanity dev",
+    "start": "sanity start",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "deploy-graphql": "sanity graphql deploy"
+  },
+  "dependencies": {
+    "@sanity/vision": "catalog:studio",
+    "react": "catalog:react",
+    "react-dom": "catalog:react",
+    "sanity": "catalog:studio",
+    "styled-components": "catalog:studio"
+  },
+  "devDependencies": {
+    "@sanity/eslint-config-studio": "catalog:utils",
+    "@sanity/types": "catalog:typescript",
+    "@types/react": "catalog:typescript",
+    "eslint": "catalog:utils",
+    "typescript": "catalog:typescript"
+  },
+  "lint-staged": {
+    "*.{js,ts,md,toml}": "eslint --cache --fix"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "stephenmelnicki.com",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "pnpm -r lint",
+    "lint:fix": "pnpm -r lint:fix",
+    "studio": "pnpm run --filter studio dev",
+    "www": "pnpm run --filter www dev"
+  },
+  "devDependencies": {
+    "lint-staged": "catalog:utils",
+    "simple-git-hooks": "catalog:utils"
+  },
+  "engines": {
+    "node": ">=24.14.1"
+  },
+  "packageManager": "pnpm@10.33.0",
+  "simple-git-hooks": {
+    "pre-commit": "pnpm -r pre-commit"
+  }
+}

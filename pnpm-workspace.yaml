@@ -1,0 +1,59 @@
+packages:
+  - studio
+  - www
+
+catalogMode: prefer
+
+catalogs:
+  react:
+    react: ^19.2.4
+    react-dom: ^19.2.4
+  studio:
+    "@sanity/vision": ^5.20.0
+    sanity: ^5.20.0
+    styled-components: ^6.1.18
+  typescript:
+    "@portabletext/types": ^4.0.2
+    "@sanity/types": ^5.20.0
+    "@types/react": ^19.2.14
+    "@types/react-dom": ^19.2.3
+    typescript: ^5.9.0
+  utils:
+    "@eslint/js": ^9.39.4
+    "@sanity/eslint-config-studio": ^6.0.0
+    autoprefixer: ^10.4.27
+    cssnano: ^7.1.4
+    eslint: ^9.39.4
+    eslint-config-prettier: ^10.1.8
+    eslint-plugin-astro: ^1.7.0
+    eslint-plugin-format: ^2.0.1
+    eslint-plugin-prettier: ^5.5.5
+    lint-staged: ^16.2.7
+    netlify-cli: ^24.10.0
+    prettier: ^3.8.1
+    prettier-plugin-astro: ^0.14.1
+    simple-git-hooks: ^2.13.1
+    typescript-eslint: ^8.57.2
+    vite: ^8.0.0
+  www:
+    "@astrojs/check": ^0.9.8
+    "@astrojs/mdx": ^5.0.3
+    "@astrojs/netlify": ^7.0.6
+    "@astrojs/react": ^5.0.3
+    "@astrojs/rss": ^4.0.18
+    "@astrojs/sitemap": ^3.7.2
+    "@picocss/pico": ^2.1.1
+    "@sanity/astro": ^3.3.1
+    "@sanity/client": ^7.20.0
+    astro: ^6.1.4
+    astro-portabletext: ^0.13.0
+    dayjs: ^1.11.20
+    groq: ^5.20.0
+
+overrides:
+  vite: "catalog:utils"
+
+shellEmulator: true
+
+allowBuilds:
+  simple-git-hooks: true

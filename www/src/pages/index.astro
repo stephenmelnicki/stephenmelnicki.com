@@ -1,0 +1,34 @@
+---
+import { PortableText } from "astro-portabletext";
+import Article from "../components/Article.astro";
+import Pagination from "../components/Pagination.astro";
+import { PAGE_SIZE } from "../consts";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getPosts } from "../utils/sanity";
+
+const posts = await getPosts();
+---
+
+<BaseLayout>
+  {
+    posts.slice(0, PAGE_SIZE).map((post) => (
+      <>
+        <Article id={post.slug.current} title={post.title} date={post.date}>
+          <PortableText value={post.content} />
+        </Article>
+        <hr />
+      </>
+    ))
+  }
+
+  {
+    posts.length > PAGE_SIZE ? (
+      <Pagination
+        prev={undefined}
+        next="/page/2/"
+        currentPage={1}
+        lastPage={Math.ceil(posts.length / PAGE_SIZE)}
+      />
+    ) : null
+  }
+</BaseLayout>
