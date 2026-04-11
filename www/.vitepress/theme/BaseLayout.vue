@@ -14,7 +14,9 @@ const { page, frontmatter, site } = useData()
         class="py-6 flex justify-between items-center border-b border-gray-200 dark:border-slate-200"
       >
         <hgroup>
-          <h1 class="text-4xl leading-9 font-extrabold dark:text-white">
+          <h1
+            class="text-4xl leading-9 font-extrabold dark:text-white"
+          >
             <a href="/">{{ site.title }}</a>
           </h1>
           <p class="mt-1 text-lg leading-8 text-muted">
@@ -28,10 +30,10 @@ const { page, frontmatter, site } = useData()
       <NotFound v-else-if="page.isNotFound" />
       <Content v-else />
     </main>
-    <footer class="container">
+    <footer class="container pb-8">
       <p class="text-sm text-muted">
-        &copy; {{ new Date().getFullYear() }} Stephen Melnicki. All rights
-        reserved.
+        &copy; {{ new Date().getFullYear() }} Stephen Melnicki. All
+        rights reserved.
       </p>
     </footer>
   </div>

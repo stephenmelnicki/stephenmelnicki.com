@@ -5,13 +5,13 @@ interface Props {
   datetime: string
   content: string
   slug: string | undefined
-};
+}
 
 defineProps<Props>()
 </script>
 
 <template>
-  <article class="mb-4 py-8 border-b border-gray-200 dark:border-slate-200">
+  <article class="py-4 mb-4 border-b border-gray-200 dark:border-slate-200">
     <header>
       <hgroup>
         <h2 class="text-3xl font-bold dark:text-white">
@@ -25,9 +25,6 @@ defineProps<Props>()
         </div>
       </hgroup>
     </header>
-    <section
-      class="prose prose-slate dark:prose-invert"
-      v-html="content"
-    />
+    <section class="prose prose-slate dark:prose-invert" v-html="content" />
   </article>
 </template>
