@@ -1,5 +1,2 @@
-# build output
-dist/
-# generated types
-.astro/
-.netlify/
+.vitepress/cache/
+.vitepress/dist/

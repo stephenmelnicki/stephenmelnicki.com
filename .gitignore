@@ -28,9 +28,6 @@ dist-ssr
 # AI agent worktrees
 .claude/worktrees/
 
-# Local Netlify folder
-.netlify
-
 # Logs
 logs
 *.log

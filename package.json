@@ -1,23 +1,35 @@
 {
   "name": "stephenmelnicki.com",
+  "type": "module",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
-  "scripts": {
-    "lint": "pnpm -r lint",
-    "lint:fix": "pnpm -r lint:fix",
-    "studio": "pnpm run --filter studio dev",
-    "www": "pnpm run --filter www dev"
-  },
-  "devDependencies": {
-    "lint-staged": "catalog:utils",
-    "simple-git-hooks": "catalog:utils"
-  },
+  "packageManager": "pnpm@10.33.0",
   "engines": {
     "node": ">=24.14.1"
   },
-  "packageManager": "pnpm@10.33.0",
+  "scripts": {
+    "lint": "eslint . --cache",
+    "lint:fix": "pnpm run lint --fix",
+    "studio": "pnpm run --filter studio dev",
+    "studio:build": "pnpm run --filter studio build",
+    "studio:preview": "pnpm run --filter studio preview",
+    "www": "pnpm run --filter www dev",
+    "www:build": "pnpm run --filter www build",
+    "www:preview": "pnpm run --filter www preview"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:eslint",
+    "eslint": "catalog:eslint",
+    "eslint-plugin-format": "catalog:eslint",
+    "lint-staged": "catalog:utils",
+    "simple-git-hooks": "catalog:utils"
+  },
   "simple-git-hooks": {
-    "pre-commit": "pnpm -r pre-commit"
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,vue,md}": [
+      "eslint --cache --fix"
+    ]
   }
 }

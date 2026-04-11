@@ -1,0 +1,7 @@
+[build]
+command = "pnpm run www:build"
+publish = "www/.vitepress/dist"
+
+[build.environment]
+NODE_VERSION = "24"
+PNPM_VERSION = "10"
