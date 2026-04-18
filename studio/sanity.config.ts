@@ -1,3 +1,4 @@
+import { codeInput } from '@sanity/code-input'
 import { visionTool } from '@sanity/vision'
 import { defineConfig } from 'sanity'
 import { structureTool } from 'sanity/structure'
@@ -8,10 +9,10 @@ const dataset = import.meta.env.SANITY_STUDIO_DATASET
 
 export default defineConfig({
   name: 'default',
-  title: 'Blog',
+  title: 'stephenmelnicki.com',
   projectId,
   dataset,
-  plugins: [structureTool(), visionTool()],
+  plugins: [structureTool(), visionTool(), codeInput()],
   schema: {
     types: schemaTypes,
   },

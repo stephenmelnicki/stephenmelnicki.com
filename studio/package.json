@@ -10,6 +10,7 @@
     "deploy": "sanity deploy"
   },
   "dependencies": {
+    "@sanity/code-input": "catalog:studio",
     "@sanity/vision": "catalog:studio",
     "react": "catalog:studio",
     "react-dom": "catalog:studio",
