@@ -7,13 +7,11 @@ export const postType = defineType({
   fields: [
     defineField({
       name: 'title',
-      title: 'Title',
       type: 'string',
       validation: rule => rule.required(),
     }),
     defineField({
       name: 'slug',
-      title: 'Slug',
       type: 'slug',
       options: {
         source: 'title',
@@ -23,19 +21,39 @@ export const postType = defineType({
     }),
     defineField({
       name: 'date',
-      title: 'Date',
       type: 'date',
       initialValue: () => new Date().toISOString().split('T')[0],
       validation: rule => rule.required(),
     }),
     defineField({
       name: 'content',
-      title: 'Content',
       type: 'array',
       of: [
         { type: 'block' },
-        { type: 'image' },
-        { type: 'code' },
+        {
+          type: 'code',
+          options: {
+            withFilename: true,
+          },
+        },
+        {
+          type: 'image',
+          fields: [
+            defineField({
+              name: 'name',
+              type: 'string',
+              validation: rule => rule.required(),
+            }),
+            defineField({
+              name: 'caption',
+              type: 'string',
+            }),
+            defineField({
+              name: 'attribution',
+              type: 'string',
+            }),
+          ],
+        },
       ],
     }),
   ],

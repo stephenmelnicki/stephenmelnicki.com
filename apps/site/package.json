@@ -12,6 +12,7 @@
     "@iconify-json/lucide": "catalog:site",
     "@portabletext/to-html": "catalog:site",
     "@sanity/client": "catalog:site",
+    "@sanity/image-url": "catalog:site",
     "@sanity/types": "catalog:typescript",
     "groq": "catalog:site",
     "shiki": "catalog:site",

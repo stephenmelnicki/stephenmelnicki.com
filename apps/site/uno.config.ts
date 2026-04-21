@@ -1,4 +1,4 @@
-import { defineConfig, presetAttributify, presetIcons, presetTypography, presetWind4 } from 'unocss'
+import { defineConfig, presetIcons, presetTypography, presetWind4 } from 'unocss'
 
 export default defineConfig({
   shortcuts: [
@@ -8,7 +8,6 @@ export default defineConfig({
     },
   ],
   presets: [
-    presetAttributify(),
     presetIcons(),
     presetTypography(),
     presetWind4(),

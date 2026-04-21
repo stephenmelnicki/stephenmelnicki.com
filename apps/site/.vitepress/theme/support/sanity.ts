@@ -1,6 +1,7 @@
 import type { PortableTextBlock, SanityDocument } from '@sanity/types'
 import process from 'node:process'
 import { createClient } from '@sanity/client'
+import { createImageUrlBuilder } from '@sanity/image-url'
 import groq from 'groq'
 import { loadEnv } from 'vitepress'
 import { dateTime, formatDate } from './date'
@@ -32,12 +33,14 @@ export interface Post {
   slug: string | undefined
 }
 
-const sanityClient = createClient({
+export const sanityClient = createClient({
   projectId: VITE_SANITY_STUDIO_PROJECT_ID,
   dataset: VITE_SANITY_STUDIO_DATASET,
   useCdn: false,
   apiVersion: '2026-04-10',
 })
+
+export const sanityImageBuilder = createImageUrlBuilder(sanityClient)
 
 async function toPost(document: PostDocument): Promise<Post> {
   const content = await toHtml(document.content)

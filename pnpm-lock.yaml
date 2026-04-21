@@ -44,6 +44,9 @@ catalogs:
     '@sanity/client':
       specifier: ^7.20.0
       version: 7.21.0
+    '@sanity/image-url':
+      specifier: ^2.1.1
+      version: 2.1.1
     groq:
       specifier: ^5.20.0
       version: 5.21.0
@@ -151,6 +154,9 @@ importers:
       '@sanity/client':
         specifier: catalog:site
         version: 7.21.0
+      '@sanity/image-url':
+        specifier: catalog:site
+        version: 2.1.1
       '@sanity/types':
         specifier: catalog:typescript
         version: 5.21.0(@types/react@19.2.14)
