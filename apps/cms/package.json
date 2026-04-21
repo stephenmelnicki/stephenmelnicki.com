@@ -1,5 +1,5 @@
 {
-  "name": "studio",
+  "name": "cms",
   "type": "module",
   "version": "1.0.0",
   "private": true,
@@ -10,12 +10,12 @@
     "deploy": "sanity deploy"
   },
   "dependencies": {
-    "@sanity/code-input": "catalog:studio",
-    "@sanity/vision": "catalog:studio",
-    "react": "catalog:studio",
-    "react-dom": "catalog:studio",
-    "sanity": "catalog:studio",
-    "styled-components": "catalog:studio"
+    "@sanity/code-input": "catalog:cms",
+    "@sanity/vision": "catalog:cms",
+    "react": "catalog:cms",
+    "react-dom": "catalog:cms",
+    "sanity": "catalog:cms",
+    "styled-components": "catalog:cms"
   },
   "devDependencies": {
     "@sanity/types": "catalog:typescript",

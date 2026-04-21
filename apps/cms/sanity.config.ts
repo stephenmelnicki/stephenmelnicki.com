@@ -8,7 +8,7 @@ const projectId = import.meta.env.SANITY_STUDIO_PROJECT_ID
 const dataset = import.meta.env.SANITY_STUDIO_DATASET
 
 export default defineConfig({
-  name: 'default',
+  name: 'blog',
   title: 'stephenmelnicki.com',
   projectId,
   dataset,

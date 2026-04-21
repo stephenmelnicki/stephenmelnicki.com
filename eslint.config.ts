@@ -7,6 +7,6 @@ export default antfu(
     typescript: true,
   },
   {
-    ignores: ['www/.vitepress/cache', 'www/.vitepress/dist'],
+    ignores: ['www/.vitepress/cache', 'www/.vitepress/dist', 'studio/.sanity', 'studio/dist'],
   },
 )

@@ -1,7 +1,9 @@
 import type { Theme } from 'vitepress'
-import BaseLayout from './BaseLayout.vue'
+import Layout from './Layout.vue'
+
 import 'virtual:uno.css'
+import './styles/base.css'
 
 export default {
-  Layout: BaseLayout,
+  Layout,
 } satisfies Theme

@@ -1,43 +1,39 @@
 packages:
-  - studio
-  - www
-
-allowBuilds:
-  simple-git-hooks: true
+  - 'apps/*'
 
 catalogMode: prefer
 
-cleanupUnusedCatalogs: true
-
-shellEmulator: true
-
 catalogs:
-  eslint:
-    '@antfu/eslint-config': ^3.2.2
-    eslint: ^9.39.4
-    eslint-plugin-format: ^2.0.1
-  studio:
+  cms:
+    '@sanity/code-input': ^7.1.0
     '@sanity/vision': ^5.20.0
     react: ^19.2.4
     react-dom: ^19.2.4
     sanity: ^5.20.0
     styled-components: ^6.1.18
+  eslint:
+    '@antfu/eslint-config': ^3.2.2
+    eslint: ^9.39.4
+    eslint-plugin-format: ^2.0.1
+  site:
+    '@iconify-json/lucide': ^1.2.102
+    '@portabletext/to-html': ^5.0.2
+    '@sanity/client': ^7.20.0
+    groq: ^5.20.0
+    shiki: ^4.0.2
+    unocss: ^66.6.8
+    vitepress: ^2.0.0-alpha.17
+    vue: ^3.5.32
   typescript:
-    '@portabletext/types': ^4.0.2
     '@sanity/types': ^5.20.0
     '@types/node': ^25.6.0
     '@types/react': ^19.2.14
-    '@types/react-dom': ^19.2.3
     typescript: ^5.9.0
   utils:
     lint-staged: ^16.2.7
     simple-git-hooks: ^2.13.1
     vite: ^7.3.1
-  www:
-    '@portabletext/to-html': ^5.0.2
-    '@sanity/client': ^7.20.0
-    groq: ^5.20.0
-    unocss: ^66.6.8
-    unplugin-vue-components: ^32.0.0
-    vitepress: ^2.0.0-alpha.17
-    vue: ^3.5.32
+
+cleanupUnusedCatalogs: true
+
+shellEmulator: true

@@ -1,6 +1,6 @@
 [build]
-command = "pnpm run www:build"
-publish = "www/.vitepress/dist"
+command = "pnpm run site:build"
+publish = "apps/site/.vitepress/dist"
 
 [build.environment]
 NODE_VERSION = "24"

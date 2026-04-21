@@ -1,0 +1,23 @@
+{
+  "name": "site",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "@iconify-json/lucide": "catalog:site",
+    "@portabletext/to-html": "catalog:site",
+    "@sanity/client": "catalog:site",
+    "@sanity/types": "catalog:typescript",
+    "groq": "catalog:site",
+    "shiki": "catalog:site",
+    "unocss": "catalog:site",
+    "vite": "catalog:utils",
+    "vitepress": "catalog:site",
+    "vue": "catalog:site"
+  }
+}

@@ -10,12 +10,12 @@
   "scripts": {
     "lint": "eslint . --cache",
     "lint:fix": "pnpm run lint --fix",
-    "studio": "pnpm run --filter studio dev",
-    "studio:build": "pnpm run --filter studio build",
-    "studio:preview": "pnpm run --filter studio preview",
-    "www": "pnpm run --filter www dev",
-    "www:build": "pnpm run --filter www build",
-    "www:preview": "pnpm run --filter www preview"
+    "cms": "pnpm run --filter cms dev",
+    "cms:build": "pnpm run --filter cms build",
+    "cms:preview": "pnpm run --filter cms preview",
+    "site": "pnpm run --filter site dev",
+    "site:build": "pnpm run --filter site build",
+    "site:preview": "pnpm run --filter site preview"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:eslint",
