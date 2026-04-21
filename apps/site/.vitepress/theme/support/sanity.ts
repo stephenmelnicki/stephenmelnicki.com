@@ -2,7 +2,7 @@ import type { PortableTextBlock, SanityDocument } from '@sanity/types'
 import process from 'node:process'
 import { createClient } from '@sanity/client'
 import { createImageUrlBuilder } from '@sanity/image-url'
-import groq from 'groq'
+import { defineQuery } from 'groq'
 import { loadEnv } from 'vitepress'
 import { dateTime, formatDate } from './date'
 import { toHtml } from './portabletext'
@@ -57,35 +57,35 @@ async function toPost(document: PostDocument): Promise<Post> {
 }
 
 export async function getPost(identifier: string): Promise<Post> {
-  const POST_QUERY = groq`*[_type == "post" && slug.current == $slug][0]{
+  const POST_QUERY = defineQuery(`*[_type == "post" && slug.current == $slug][0]{
     title,
     slug,
     date,
     content
-  }`
+  }`)
 
   const document = await sanityClient.fetch<PostDocument>(POST_QUERY, { slug: identifier })
   return await toPost(document)
 }
 
 export async function getPosts(): Promise<Post[]> {
-  const POSTS_QUERY = groq`*[_type == "post" && defined(slug.current)]|order(date desc){
+  const POSTS_QUERY = defineQuery(`*[_type == "post" && defined(slug.current)]|order(date desc){
     title,
     slug,
     date,
     content
-  }`
+  }`)
 
   const documents = await sanityClient.fetch<PostDocument[]>(POSTS_QUERY)
   return await Promise.all(documents.map(toPost))
 }
 
 export async function getPaths(): Promise<Path[]> {
-  const SLUGS_QUERY = groq`*[_type == "post" && defined(slug.current)]{
+  const SLUGS_QUERY = defineQuery(`*[_type == "post" && defined(slug.current)]{
     "params": {
       "slug": slug.current
     }
-  }`
+  }`)
 
   return sanityClient.fetch<Path[]>(SLUGS_QUERY)
 }
