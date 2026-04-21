@@ -1,6 +1,7 @@
 .env
 .env.local
 
+TODOS.md
 coverage
 node_modules
 dist
