@@ -6,6 +6,7 @@ catalogMode: prefer
 catalogs:
   cms:
     '@sanity/code-input': ^7.1.0
+    '@sanity/icons': ^3.7.4
     '@sanity/vision': ^5.20.0
     react: ^19.2.4
     react-dom: ^19.2.4
