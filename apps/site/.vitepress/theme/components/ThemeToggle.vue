@@ -9,13 +9,13 @@ function toggleAppearance() {
 </script>
 
 <template>
-  <button aria-label="Color Mode" class="inline-block header-button" @click="toggleAppearance">
+  <button aria-label="Color Mode" class="inline-block icon-button" @click="toggleAppearance">
     <template v-if="isDark">
-      <div name="lucide-moon" class="w-5 h-5 i-lucide-moon" />
+      <div name="moon" class="w-5 h-5 i-carbon-moon" />
       <span class="sr-only">Dark Mode</span>
     </template>
     <template v-else>
-      <div name="lucide-sun" class="w-5 h-5 i-lucide-sun" />
+      <div name="sun" class="w-5 h-5 i-carbon-sun" />
       <span class="sr-only">Light Mode</span>
     </template>
   </button>

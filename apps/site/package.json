@@ -9,11 +9,12 @@
     "preview": "vitepress preview"
   },
   "devDependencies": {
-    "@iconify-json/lucide": "catalog:site",
+    "@iconify-json/carbon": "catalog:site",
     "@portabletext/to-html": "catalog:site",
     "@sanity/client": "catalog:site",
     "@sanity/image-url": "catalog:site",
     "@sanity/types": "catalog:typescript",
+    "feed": "catalog:site",
     "groq": "catalog:site",
     "shiki": "catalog:site",
     "unocss": "catalog:site",

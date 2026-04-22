@@ -13,13 +13,13 @@ const isActivePage = path === `/archive/${props.post.slug}`
 </script>
 
 <template>
-  <article class="py-4 mb-4 border-b border-neutral-200 dark:border-neutral-700 prose prose-neutral dark:prose-invert">
+  <article class="py-4">
     <header>
-      <hgroup class="not-prose">
+      <hgroup>
         <h2 v-if="isActivePage" class="text-3xl font-bold dark:text-white not-prose">
           {{ post.title }}
         </h2>
-        <h2 v-else class="text-3xl font-bold">
+        <h2 v-else class="text-2xl md:text-3xl font-bold">
           <a :href="`/archive/${post.slug}`" class="hover:underline text-sky-700 dark:text-sky-500">{{ post.title }}</a>
         </h2>
         <div>
@@ -27,6 +27,10 @@ const isActivePage = path === `/archive/${props.post.slug}`
         </div>
       </hgroup>
     </header>
-    <section class="prose-a:no-underline prose-pre:bg-slate-50 dark:prose-pre:bg-slate-800" v-html="post.content" />
+    <section
+      class="prose prose-neutral dark:prose-invert prose-a:no-underline prose-pre:bg-slate-50 dark:prose-pre:bg-slate-800 max-w-none"
+      v-html="post.content"
+    />
+    <hr class="mt-8 border-neutral-200 dark:border-neutral-700">
   </article>
 </template>
