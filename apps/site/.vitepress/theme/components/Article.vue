@@ -23,14 +23,14 @@ const isActivePage = path === `/archive/${props.post.slug}`
           <a :href="`/archive/${post.slug}`" class="hover:underline text-sky-700 dark:text-sky-500">{{ post.title }}</a>
         </h2>
         <div>
-          <time :datetime="post.datetime" class="text-muted">{{ post.date }}</time>
+          <time :datetime="post.datetime" class="text-muted text-sm">{{ post.date }}</time>
         </div>
       </hgroup>
     </header>
     <section
-      class="prose prose-neutral dark:prose-invert prose-a:no-underline prose-pre:bg-slate-50 dark:prose-pre:bg-slate-800 max-w-none"
+      class="mb-12 prose prose-neutral dark:prose-invert prose-a:no-underline prose-pre:bg-slate-50 dark:prose-pre:bg-slate-800 max-w-none"
       v-html="post.content"
     />
-    <hr class="mt-8 border-neutral-200 dark:border-neutral-700">
+    <hr class="border-neutral-200 dark:border-neutral-700">
   </article>
 </template>
