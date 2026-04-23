@@ -5,3 +5,9 @@ publish = "apps/site/.vitepress/dist"
 [build.environment]
 NODE_VERSION = "24"
 PNPM_VERSION = "10"
+
+[[headers]]
+for = "/assets/*"
+
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
